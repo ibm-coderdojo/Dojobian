@@ -7,8 +7,8 @@
 
 /root/AddPyDevCertificate.py
 
-/usr/local/eclipse/eclipse -nosplash \
+/usr/lib/eclipse/eclipse -nosplash \
    -application org.eclipse.equinox.p2.director \
    -repository http://pydev.org/updates/ \
-   -destination /usr/local/eclipse \
+   -destination /usr/lib/eclipse \
    -installIU org.python.pydev.feature.feature.group
