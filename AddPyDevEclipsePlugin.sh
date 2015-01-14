@@ -10,5 +10,6 @@
 /usr/lib/eclipse/eclipse -nosplash \
    -application org.eclipse.equinox.p2.director \
    -repository http://pydev.org/updates/ \
-   -destination /usr/lib/eclipse \
-   -installIU org.python.pydev.feature.feature.group
+   -destination /usr/lib/eclipse/ \
+   -installIU org.python.pydev.feature.feature.group \
+   -profileProperties org.eclipse.update.install.features=true
