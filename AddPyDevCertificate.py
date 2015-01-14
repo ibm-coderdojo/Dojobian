@@ -9,10 +9,10 @@
 import os, sys
 import pexpect
 
-print "Adding pydev_certificate.cer to /usr/lib/jvm/java-6-openjdk/jre/lib/security/cacerts"
+print "Adding pydev_certificate.cer to /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/security/cacerts"
 
 cwd = os.path.abspath (os.path.dirname(sys.argv[0]))
-child = pexpect.spawn("keytool -import -file ./pydev_certificate.cer -keystore /usr/lib/jvm/java-6-openjdk/jre/lib/security/cacerts")
+child = pexpect.spawn("keytool -import -file /root/pydev_certificate.cer -keystore /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/security/cacerts")
 child.expect("Enter keystore password:")
 child.sendline("changeit")
 if child.expect(["Trust this certificate?", "already exists"]) == 0:
