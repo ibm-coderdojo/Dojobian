@@ -2,4 +2,4 @@
 
 /usr/bin/apt-get update
 
-sleep 2
+read -t 10 -p "Hit ENTER to close this window" 
