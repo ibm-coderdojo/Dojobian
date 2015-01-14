@@ -21,6 +21,7 @@ Install development tools
 /usr/bin/apt-get -y install subversion subversion-tools
 /usr/bin/apt-get -y install git git-doc git-cvs git-svn git-gui
 /usr/bin/apt-get -y install eclipse*
+/usr/bin/apt-get -y install scratch squeak-plugins-scratch-dbg etoys pulseaudio pavumeter pavucontrol paman paprefs
 
 
 /usr/bin/wget --no-check-certificate -O /root/AddPyDevCertificate.py https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevCertificate.py
