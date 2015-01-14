@@ -21,6 +21,12 @@ Install development tools
 /usr/bin/apt-get -y install eclipse*
 
 
+/usr/bin/wget --no-check-certificate -O /root/AddPyDevCertificate.py https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevCertificate.py
+/bin/chmod ug+x /root/AddPyDevCertificate.py
+
+/usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
+/bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
+
 /usr/bin/wget --no-check-certificate -O /root/DojobianSystemConfiguration.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/DojobianSystemConfiguration.sh
 /bin/chmod ug+x /root/DojobianSystemConfiguration.sh
 
