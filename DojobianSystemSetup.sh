@@ -64,8 +64,11 @@ echo "
 /usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
 /usr/bin/wget http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
 /bin/chmod ug+x /root/AdobeAIRInstaller.bin
+/usr/bin/wget http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
+/bin/chmod ug+x /root/Scratch-430.air
 
 /bin/rm /root/AdobeAIRInstaller.bin
+/bin/rm /root/Scratch-430.air
 
 echo " 
 #######################################################################
