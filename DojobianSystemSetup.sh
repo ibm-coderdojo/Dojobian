@@ -10,6 +10,7 @@ echo "
 "
 /usr/bin/apt-get -y install vim vim-doc vim-scripts ctags
 /usr/bin/apt-get -y install curl
+/usr/bin/apt-get -y install dialog
 /usr/bin/apt-get -y install openjdk-7-jdk icedtea-7-plugin icedtea-7-jre-jamvm fonts-ipafont-gothic fonts-ipafont-mincho ttf-wqy-microhei ttf-wqy-zenhei ttf-indic-fonts
 /usr/bin/update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 
@@ -32,6 +33,15 @@ echo "
 /bin/chmod ug+x /root/AddPyDevCertificate.py
 /usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
 /bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
+
+echo " 
+#######################################################################
+#  Install development tools: Scratch 2
+#######################################################################
+"
+/usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
+/usr/bin/wget http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
+/bin/chmod ug+x /root/AdobeAIRInstaller.bin
 
 
 echo " 
