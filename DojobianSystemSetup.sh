@@ -5,7 +5,7 @@
 
 echo "
 #######################################################################
-Install tools
+#  Install tools
 #######################################################################
 "
 /usr/bin/apt-get -y install vim vim-doc vim-scripts ctags
@@ -15,7 +15,7 @@ Install tools
 
 echo " 
 #######################################################################
-Install development tools
+#  Install development tools
 #######################################################################
 "
 /usr/bin/apt-get -y install subversion subversion-tools
@@ -23,13 +23,29 @@ Install development tools
 /usr/bin/apt-get -y install eclipse*
 /usr/bin/apt-get -y install scratch squeak-plugins-scratch-dbg etoys pulseaudio pavumeter pavucontrol paman paprefs
 
-
+echo " 
+#######################################################################
+#  Install development tools: PyDev
+#######################################################################
+"
 /usr/bin/wget --no-check-certificate -O /root/AddPyDevCertificate.py https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevCertificate.py
 /bin/chmod ug+x /root/AddPyDevCertificate.py
-
 /usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
 /bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
 
+
+echo " 
+#######################################################################
+#  Clean unused files
+#######################################################################
+"
+
+
+echo " 
+#######################################################################
+#  Install configuration and update scripts
+#######################################################################
+"
 /usr/bin/wget --no-check-certificate -O /root/DojobianSystemConfiguration.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/DojobianSystemConfiguration.sh
 /bin/chmod ug+x /root/DojobianSystemConfiguration.sh
 
