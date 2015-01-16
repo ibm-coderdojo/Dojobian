@@ -3,6 +3,13 @@
 #  DojobianSystemSetup.sh
 #######################################################################
 
+echo " 
+#######################################################################
+#  Configure package repository
+#######################################################################
+"
+/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/sources.list
+
 echo "
 #######################################################################
 #  Install tools
