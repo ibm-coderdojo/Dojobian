@@ -14,6 +14,16 @@ echo "
 /usr/bin/apt-get -y install openjdk-7-jdk icedtea-7-plugin icedtea-7-jre-jamvm fonts-ipafont-gothic fonts-ipafont-mincho ttf-wqy-microhei ttf-wqy-zenhei ttf-indic-fonts
 /usr/bin/update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 
+echo "
+#######################################################################
+#  Install browsers
+#######################################################################
+"
+/usr/bin/apt-get -y install iceweasel flashplugin-nonfree xul-ext-all-in-one-sidebar xul-ext-autofill-forms xul-ext-automatic-save-folder xul-ext-debianbuttons xul-ext-firebug xul-ext-firexpath xul-ext-greasemonkey xulrunner-dev browser-plugin-vlc xul-ext-scrapbook xul-ext-webdeveloper xulrunner-24.0
+/usr/bin/apt-get -y install libdbusmenu-gtk4 libindicator7 libappindicator1
+/usr/bin/wget --no-check-certificate -O /root/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+/usr/bin/dpkg -i /root/google-chrome-stable_current_amd64.deb
+
 echo " 
 #######################################################################
 #  Install development tools
