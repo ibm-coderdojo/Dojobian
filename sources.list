@@ -1,4 +1,3 @@
 deb ftp://ftp.uk.debian.org/debian/ wheezy contrib non-free main
 deb http://security.debian.org/ wheezy/updates main
 deb-src http://security.debian.org/ wheezy/updates main
-deb http://packages.linuxmint.com debian import
