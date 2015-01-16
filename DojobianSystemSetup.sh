@@ -23,6 +23,7 @@ echo "
 /usr/bin/apt-get -y install libdbusmenu-gtk4 libindicator7 libappindicator1
 /usr/bin/wget --no-check-certificate -O /root/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 /usr/bin/dpkg -i /root/google-chrome-stable_current_amd64.deb
+/bin/rm /root/google-chrome-stable_current_amd64.deb
 
 echo " 
 #######################################################################
@@ -43,6 +44,10 @@ echo "
 /bin/chmod ug+x /root/AddPyDevCertificate.py
 /usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
 /bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
+/root/AddPyDevEclipsePlugin.sh
+/bin/rm /root/AddPyDevEclipsePlugin.sh
+/bin/rm /root/AddPyDevCertificate.py
+/bin/rm /root/pydev_certificate.cer
 
 echo " 
 #######################################################################
@@ -53,13 +58,7 @@ echo "
 /usr/bin/wget http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
 /bin/chmod ug+x /root/AdobeAIRInstaller.bin
 
-
-echo " 
-#######################################################################
-#  Clean unused files
-#######################################################################
-"
-
+/bin/rm /root/AdobeAIRInstaller.bin
 
 echo " 
 #######################################################################
