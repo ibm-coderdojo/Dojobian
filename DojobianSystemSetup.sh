@@ -63,18 +63,18 @@ echo "
 #######################################################################
 "
 /usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
-/usr/bin/wget -O /root/libnss3-1d_3.14.5-1%2bdeb7u3_amd64.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_amd64.deb
-/usr/bin/dpkg -i /root/libnss3-1d_3.14.5-1%2bdeb7u3_amd64.deb
-/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1%2bdeb7u2_amd64.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_amd64.deb
-/usr/bin/dpkg -i /root/libnspr4-0d_4.9.2-1%2bdeb7u2_amd64.deb
+/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
+/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
+/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
+/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
 /usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
 /bin/chmod ug+x /root/AdobeAIRInstaller.bin
 
 /usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
 /bin/chmod ug+x /root/Scratch-430.air
 
-/bin/rm /root/libnss3-1d_3.14.5-1%2bdeb7u3_amd64.deb
-/bin/rm /root/libnspr4-0d_4.9.2-1%2bdeb7u2_amd64.deb
+/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
+/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
 /bin/rm /root/AdobeAIRInstaller.bin
 /bin/rm /root/Scratch-430.air
 
