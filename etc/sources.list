@@ -1,3 +1,4 @@
 deb ftp://ftp.uk.debian.org/debian/ wheezy contrib non-free main
-deb http://security.debian.org/ wheezy/updates main
+deb ftp://ftp.uk.debian.org/debian/ testing main
+deb http://security.debian.org/ wheezy/updates contrib non-free main
 deb-src http://security.debian.org/ wheezy/updates main
