@@ -66,6 +66,8 @@ echo "
 /usr/bin/wget -O /root/appinventor2-setup_1.1_all.deb http://commondatastorage.googleapis.com/appinventordownloads/appinventor2-setup_1.1_all.deb
 /usr/bin/dpkg -i /root/appinventor2-setup_1.1_all.deb
 /bin/rm /root/appinventor2-setup_1.1_all.deb
+/usr/bin/wget --no-check-certificate -O /etc/udev/rules.d/51-android.rules https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/51-android.rules
+/bin/chmod a+r /etc/udev/rules.d/51-android.rules
 
 echo " 
 #######################################################################
