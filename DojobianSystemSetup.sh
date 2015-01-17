@@ -9,6 +9,8 @@ echo "
 #######################################################################
 "
 /usr/bin/wget --no-check-certificate -O /etc/apt/sources.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/sources.list
+/usr/bin/dpkg --add-architecture i386
+/usr/bin/apt-get update
 
 echo "
 #######################################################################
@@ -72,6 +74,7 @@ echo "
 /bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
 /bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
 /bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
+/usr/bin/apt-get -y ia32-libs ia32-libs-gtk libgtk2.0-0
 /usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
 /bin/chmod ug+x /root/AdobeAIRInstaller.bin
 
