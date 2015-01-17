@@ -65,7 +65,7 @@ echo "
 
 echo " 
 #######################################################################
-#  Install development tools: Scratch 2 (not working)
+#  Install development tools: Scratch 2
 #######################################################################
 "
 /usr/bin/dpkg --add-architecture i386
@@ -83,11 +83,15 @@ echo "
 /usr/bin/apt-get -y ia32-libs ia32-libs-gtk libgtk2.0-0
 /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
 /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+export GNOME_DESKTOP_SESSION_ID=default
 /usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
 /bin/chmod ug+x /root/AdobeAIRInstaller.bin
-
+/root/AdobeAIRInstaller.bin
 /usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
 /bin/chmod ug+x /root/Scratch-430.air
+/usr/bin/Adobe\ AIR\ Application\ Installer /root/Scratch-430.air
+
+echo “GNOME_DESKTOP_SESSION_ID=default” >> /etc/environment
 
 /bin/rm -rf /tmp/libnss3
 /bin/rm -rf /tmp/libnspr4
