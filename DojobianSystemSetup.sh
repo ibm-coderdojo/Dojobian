@@ -9,8 +9,6 @@ echo "
 #######################################################################
 "
 /usr/bin/wget --no-check-certificate -O /etc/apt/sources.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/sources.list
-/usr/bin/dpkg --add-architecture i386
-/usr/bin/apt-get update
 
 echo "
 #######################################################################
@@ -61,32 +59,34 @@ echo "
 
 echo " 
 #######################################################################
-#  Install development tools: Scratch 2
+#  Install development tools: Scratch 2 (not working)
 #######################################################################
 "
-/usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
-/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
-/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
-/bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
-/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
-/bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-/bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
-/bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
-/bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
-/usr/bin/apt-get -y ia32-libs ia32-libs-gtk libgtk2.0-0
-/usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
-/bin/chmod ug+x /root/AdobeAIRInstaller.bin
+#/usr/bin/dpkg --add-architecture i386
+#/usr/bin/apt-get update
+#/usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
+#/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
+#/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
+#/bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+#/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
+#/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
+#/bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+#/bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
+#/bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
+#/bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
+#/usr/bin/apt-get -y ia32-libs ia32-libs-gtk libgtk2.0-0
+#/usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
+#/bin/chmod ug+x /root/AdobeAIRInstaller.bin
 
-/usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
-/bin/chmod ug+x /root/Scratch-430.air
+#/usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
+#/bin/chmod ug+x /root/Scratch-430.air
 
-/bin/rm -rf /tmp/libnss3
-/bin/rm -rf /tmp/libnspr4
-/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
-/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
-/bin/rm /root/AdobeAIRInstaller.bin
-/bin/rm /root/Scratch-430.air
+#/bin/rm -rf /tmp/libnss3
+#/bin/rm -rf /tmp/libnspr4
+#/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
+#/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
+#/bin/rm /root/AdobeAIRInstaller.bin
+#/bin/rm /root/Scratch-430.air
 
 echo " 
 #######################################################################
