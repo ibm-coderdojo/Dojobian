@@ -15,6 +15,7 @@ echo "
 #  Install tools
 #######################################################################
 "
+/usr/bin/apt-get -y install thunar-gtkhash thunar-vcs-plugin
 /usr/bin/apt-get -y install vim vim-doc vim-scripts ctags
 /usr/bin/apt-get -y install curl
 /usr/bin/apt-get -y install dialog
