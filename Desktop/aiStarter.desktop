@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=aiStarter
+Comment=Start AppInventor service in background
+Exec=/usr/google/appinventor/commands-for-Appinventor/aiStarter
+Icon=applications-system
+Path=
+Terminal=true
+StartupNotify=false
