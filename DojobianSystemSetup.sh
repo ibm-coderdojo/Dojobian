@@ -9,7 +9,7 @@ echo "
 #######################################################################
 "
 /usr/bin/wget --no-check-certificate -O /etc/apt/sources.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/sources.list
-/usr/bin/apt-get clean
+#/usr/bin/apt-get clean
 /usr/bin/apt-get update
 /usr/bin/apt-get -y upgrade
 
