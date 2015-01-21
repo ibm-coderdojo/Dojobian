@@ -32,13 +32,17 @@ Partition disks
 -  Select "Yes" to write the changes to disk
 
 Configure the package manager
--  Select "Yes" to use a network mirror
+If your network is not already available (e.g. IBMVISITOR):
+-  Select "No" to avoid to use a network mirror at this stage
+-  You will receive an error "Cannot access repository", ignore it selecting "Continue"
+-  Proceed with GRUB section
+
+If your network is already available (e.g. your home network)
+-  Select "Yes" to use a network mirror at this stage
 -  Select the closest archive mirror country (i.e. United Kingdom)
 -  Select the Debian archive mirror (i.e. ftp.uk.debian.org)
 -  Leave blank the HTTP proxy information
--  You will receive an error "Bad archive mirror", ignore it selecting "Continue"
--  Select "Go back" then select "Yes" to continue without a network mirror
--  You will receive an error "Cannot access repository", ignore it selecting "Continue"
+-  Proceed with GRUB section
 
 Install the GRUB boot loader on a hard disk
 -  Select "Yes" to install the GRUB boot loader to the master boot record
