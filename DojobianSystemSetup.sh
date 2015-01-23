@@ -23,6 +23,14 @@ echo "
 /usr/bin/apt-get update
 /usr/bin/apt-get -y upgrade
 
+echo " 
+#######################################################################
+#  Configure environment settings
+#######################################################################
+"
+/usr/bin/wget --no-check-certificate -O /etc/environment https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/environment
+export GNOME_DESKTOP_SESSION_ID=default
+
 echo "
 #######################################################################
 #  Install tools
