@@ -53,7 +53,7 @@ echo "
 #######################################################################
 "
 /usr/bin/apt-get -y install -t stable iceweasel flashplugin-nonfree xul-ext-all-in-one-sidebar xul-ext-autofill-forms xul-ext-automatic-save-folder xul-ext-debianbuttons xul-ext-firebug xul-ext-firexpath xul-ext-greasemonkey xulrunner-dev browser-plugin-vlc xul-ext-scrapbook xul-ext-webdeveloper xulrunner-24.0
-/usr/bin/apt-get -y install -t stable libdbusmenu-gtk4 libindicator7 libappindicator1
+/usr/bin/apt-get -y install -t stable libdbusmenu-gtk4 libindicator7 libappindicator1 libxss1
 /usr/bin/wget --no-check-certificate -O /root/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 /usr/bin/dpkg -i /root/google-chrome-stable_current_amd64.deb
 /bin/rm /root/google-chrome-stable_current_amd64.deb
@@ -133,7 +133,7 @@ export GNOME_DESKTOP_SESSION_ID=default
 /bin/chmod ug+x /root/Scratch-430.air
 /usr/bin/Adobe\ AIR\ Application\ Installer /root/Scratch-430.air
 
-echo “GNOME_DESKTOP_SESSION_ID=default” >> /etc/environment
+#echo GNOME_DESKTOP_SESSION_ID=default >> /etc/environment
 
 #/bin/rm -rf /tmp/libnss3
 #/bin/rm -rf /tmp/libnspr4
