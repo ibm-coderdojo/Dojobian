@@ -62,9 +62,12 @@ echo "
 "
 /usr/bin/apt-get -y install -t stable iceweasel flashplugin-nonfree xul-ext-all-in-one-sidebar xul-ext-autofill-forms xul-ext-automatic-save-folder xul-ext-debianbuttons xul-ext-firebug xul-ext-firexpath xul-ext-greasemonkey xulrunner-dev browser-plugin-vlc xul-ext-scrapbook xul-ext-webdeveloper xulrunner-24.0
 /usr/bin/apt-get -y install -t stable libdbusmenu-gtk4 libindicator7 libappindicator1 libxss1
-/usr/bin/wget --no-check-certificate -O /root/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-/usr/bin/dpkg -i /root/google-chrome-stable_current_amd64.deb
-/bin/rm /root/google-chrome-stable_current_amd64.deb
+if [ ! -f "/usr/bin/google-chrome" ]
+then
+    /usr/bin/wget --no-check-certificate -O /root/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    /usr/bin/dpkg -i /root/google-chrome-stable_current_amd64.deb
+    /bin/rm /root/google-chrome-stable_current_amd64.deb
+fi
 
 echo " 
 #######################################################################
@@ -83,14 +86,18 @@ echo "
 #  Install development tools: PyDev
 #######################################################################
 "
-/usr/bin/wget --no-check-certificate -O /root/AddPyDevCertificate.py https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevCertificate.py
-/bin/chmod ug+x /root/AddPyDevCertificate.py
-/usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
-/bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
-/root/AddPyDevEclipsePlugin.sh
-/bin/rm /root/AddPyDevEclipsePlugin.sh
-/bin/rm /root/AddPyDevCertificate.py
-/bin/rm /root/pydev_certificate.cer
+pydev=(/usr/lib/eclipse/plugins/org.python.pydev.*)
+if [[ ! -d "$pydev" ]]
+then
+    /usr/bin/wget --no-check-certificate -O /root/AddPyDevCertificate.py https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevCertificate.py
+    /bin/chmod ug+x /root/AddPyDevCertificate.py
+    /usr/bin/wget --no-check-certificate -O /root/AddPyDevEclipsePlugin.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/AddPyDevEclipsePlugin.sh
+    /bin/chmod ug+x /root/AddPyDevEclipsePlugin.sh
+    /root/AddPyDevEclipsePlugin.sh
+    /bin/rm /root/AddPyDevEclipsePlugin.sh
+    /bin/rm /root/AddPyDevCertificate.py
+    /bin/rm /root/pydev_certificate.cer
+fi
 
 echo " 
 #######################################################################
@@ -108,47 +115,51 @@ echo "
 "
 /usr/bin/apt-get -y install lib32z1
 /usr/bin/apt-get -y install -t testing libc6=2.19* libc6-dev=* libc6-i386=2.19* lib32z1
-/usr/bin/wget -O /root/appinventor2-setup_1.1_all.deb http://commondatastorage.googleapis.com/appinventordownloads/appinventor2-setup_1.1_all.deb
-/usr/bin/dpkg -i /root/appinventor2-setup_1.1_all.deb
-/bin/rm /root/appinventor2-setup_1.1_all.deb
+if [ ! -f "/usr/google/appinventor/commands-for-Appinventor/aiStarter" ]
+then
+    /usr/bin/wget -O /root/appinventor2-setup_1.1_all.deb http://commondatastorage.googleapis.com/appinventordownloads/appinventor2-setup_1.1_all.deb
+    /usr/bin/dpkg -i /root/appinventor2-setup_1.1_all.deb
+    /bin/rm /root/appinventor2-setup_1.1_all.deb
+fi
 /usr/bin/wget --no-check-certificate -O /etc/udev/rules.d/51-android.rules https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/udev/rules.d/51-android.rules
 /bin/chmod a+r /etc/udev/rules.d/51-android.rules
 
 echo " 
 #######################################################################
-#  Install development tools: Scratch 2
+#  Install development tools: Scratch 2   >>>  NOT WORKING!!!
 #######################################################################
 "
-/usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
-#/usr/bin/apt-get -y install -t testing libnss3 libnspr4
-/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
-/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
-/bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
-/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
-/bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-/bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
-/bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
-/bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
-/usr/bin/apt-get -y install ia32-libs ia32-libs-gtk libgtk2.0-0
-/bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
-/bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
-export GNOME_DESKTOP_SESSION_ID=default
-/usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
-/bin/chmod ug+x /root/AdobeAIRInstaller.bin
-/root/AdobeAIRInstaller.bin
-/usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
-/bin/chmod ug+x /root/Scratch-430.air
-/usr/bin/Adobe\ AIR\ Application\ Installer /root/Scratch-430.air
+if [ -f "/usr/bin/Adobe" ]
+then
+    /usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
+    #/usr/bin/apt-get -y install -t testing libnss3 libnspr4
+    /usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
+    /usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
+    /bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+    /usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
+    /usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
+    /bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+    /bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
+    /bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
+    /bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
+    /usr/bin/apt-get -y install ia32-libs ia32-libs-gtk libgtk2.0-0
+    /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
+    /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+    export GNOME_DESKTOP_SESSION_ID=default
+    /usr/bin/wget -O /root/AdobeAIRInstaller.bin http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
+    /bin/chmod ug+x /root/AdobeAIRInstaller.bin
+    /root/AdobeAIRInstaller.bin
+    /usr/bin/wget -O /root/Scratch-430.air http://cdn.scratch.mit.edu/scratchr2/static/sa/Scratch-430.air
+    /bin/chmod ug+x /root/Scratch-430.air
+    /usr/bin/Adobe\ AIR\ Application\ Installer /root/Scratch-430.air
 
-#echo GNOME_DESKTOP_SESSION_ID=default >> /etc/environment
-
-/bin/rm -rf /tmp/libnss3
-/bin/rm -rf /tmp/libnspr4
-/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
-/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
-/bin/rm /root/AdobeAIRInstaller.bin
-/bin/rm /root/Scratch-430.air
+    /bin/rm -rf /tmp/libnss3
+    /bin/rm -rf /tmp/libnspr4
+    /bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
+    /bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
+    /bin/rm /root/AdobeAIRInstaller.bin
+    /bin/rm /root/Scratch-430.air
+fi
 
 echo " 
 #######################################################################
@@ -170,7 +181,11 @@ echo "
 /usr/bin/wget --no-check-certificate -O /root/Desktop/UpdateDojobian.desktop https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/UpdateDojobian.desktop
 /usr/bin/wget --no-check-certificate -O /root/Desktop/Scratch2.desktop https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/Scratch2.desktop
 /usr/bin/wget --no-check-certificate -O /root/Desktop/aiStarter.desktop https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/aiStarter.desktop
-/bin/su ninja -c "/bin/mkdir ~/Desktop"
+
+if [ ! -d "/home/ninja/Desktop" ]
+then
+    /bin/su ninja -c "/bin/mkdir ~/Desktop"
+fi
 /bin/cp /root/Desktop/Scratch2.desktop /home/ninja/Desktop/
 /bin/cp /root/Desktop/aiStarter.desktop /home/ninja/Desktop/
 
