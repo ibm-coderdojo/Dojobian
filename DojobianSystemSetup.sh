@@ -144,11 +144,16 @@ echo "
 #  Install desktop links
 #######################################################################
 "
+/usr/bin/wget --no-check-certificate -O /root/Desktop/DojobianSystemConfiguration.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/DojobianSystemConfiguration.sh
+/usr/bin/wget --no-check-certificate -O /root/Desktop/DojobianSystemUpdate.sh https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/DojobianSystemUpdate.sh
 /usr/bin/wget --no-check-certificate -O /root/Desktop/Scratch2.desktop https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/Scratch2.desktop
 /bin/cp /root/Desktop/Scratch2.desktop /home/ninja/Desktop/
 /usr/bin/wget --no-check-certificate -O /root/Desktop/aiStarter.desktop https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/Desktop/aiStarter.desktop
 /bin/cp /root/Desktop/aiStarter.desktop /home/ninja/Desktop/
 
-
-read -t 10 -p "Hit ENTER to close this window" 
+echo " 
+#######################################################################
+#  The configuration script execution is completed
+#######################################################################
+"read -t 10 -p "Hit ENTER to close this window" 
 exit 0
