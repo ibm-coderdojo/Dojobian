@@ -107,7 +107,7 @@ echo "
 #######################################################################
 "
 /usr/bin/apt-get -y install lib32z1
-/usr/bin/apt-get -y -t testing install libc6-dev
+/usr/bin/apt-get -y install -t testing libc6=2.19* libc6-dev=*
 /usr/bin/wget -O /root/appinventor2-setup_1.1_all.deb http://commondatastorage.googleapis.com/appinventordownloads/appinventor2-setup_1.1_all.deb
 /usr/bin/dpkg -i /root/appinventor2-setup_1.1_all.deb
 /bin/rm /root/appinventor2-setup_1.1_all.deb
