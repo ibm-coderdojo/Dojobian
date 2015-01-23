@@ -75,7 +75,7 @@ echo "
 /usr/bin/apt-get -y install -t stable git git-doc git-cvs git-svn git-gui
 /usr/bin/apt-get -y install -t stable geany
 /usr/bin/apt-get -y install -t stable diffuse
-/usr/bin/apt-get -y install eclipse*
+/usr/bin/apt-get -y install -t stable eclipse
 /usr/bin/apt-get -y install -t stable scratch squeak-plugins-scratch-dbg etoys pulseaudio pavumeter pavucontrol paman paprefs
 
 echo " 
