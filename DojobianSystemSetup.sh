@@ -30,6 +30,7 @@ echo "
 "
 /usr/bin/apt-get -y install -t stable thunar-gtkhash thunar-vcs-plugin
 /usr/bin/apt-get -y install -t stable vim vim-doc vim-scripts ctags leafpad gedit gedit-plugins
+/usr/bin/apt-get -y install -t stable grsync
 /usr/bin/apt-get -y install -t stable curl
 /usr/bin/apt-get -y install -t stable dialog
 /usr/bin/apt-get -y install -t stable gpa
@@ -41,7 +42,9 @@ echo "
 #  Install graphical tools
 #######################################################################
 "
+/usr/bin/apt-get -y install -t stable gcolor2
 /usr/bin/apt-get -y install -t stable inkscape
+/usr/bin/apt-get -y install -t stable dia
 /usr/bin/apt-get -y install -t stable recordmydesktop
 
 echo "
@@ -63,6 +66,7 @@ echo "
 /usr/bin/apt-get -y install -t stable subversion subversion-tools
 /usr/bin/apt-get -y install -t stable git git-doc git-cvs git-svn git-gui
 /usr/bin/apt-get -y install -t stable geany
+/usr/bin/apt-get -y install -t stable diffuse
 /usr/bin/apt-get -y install eclipse*
 /usr/bin/apt-get -y install -t stable scratch squeak-plugins-scratch-dbg etoys pulseaudio pavumeter pavucontrol paman paprefs
 
