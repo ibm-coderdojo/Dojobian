@@ -69,7 +69,7 @@ Access the IBMVISITOR network
 Post install configuration script
 -  Open a teminal
 -  Type this command:
-`
+```bash
 /usr/bin/wget --no-check-certificate -O - https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/DojobianSystemSetup.sh | /bin/bash
-
+```
 When during the setup appears a message like "Restart services during package upgrades without asking?", select "Yes"
