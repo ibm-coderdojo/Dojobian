@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Configure Dojobian
+Comment=
+Exec=/root/DojobianSystemConfiguration.sh
+Icon=preferences-system-session
+Path=/root
+Terminal=true
+StartupNotify=false
