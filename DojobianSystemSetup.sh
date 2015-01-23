@@ -120,16 +120,16 @@ echo "
 #######################################################################
 "
 /usr/bin/apt-get -y lib32asound2 lib32gcc1 lib32ncurses5 lib32stdc++6 lib32z1 lib32nss-mdns
-/usr/bin/apt-get -y -t testing install libnss3 libnspr4
-#/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
-#/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
-#/bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-#/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
-#/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
-#/bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
-#/bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
-#/bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
-#/bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
+#/usr/bin/apt-get -y install -t testing libnss3 libnspr4
+/usr/bin/wget -O /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nss/libnss3-1d_3.14.5-1%2bdeb7u3_i386.deb
+/usr/bin/dpkg-deb -x /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb /tmp/libnss3
+/bin/mv /tmp/libnss3/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+/usr/bin/wget -O /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb http://mirrors.kernel.org/debian/pool/main/n/nspr/libnspr4-0d_4.9.2-1%2bdeb7u2_i386.deb
+/usr/bin/dpkg-deb -x /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb /tmp/libnspr4
+/bin/mv /tmp/libnspr4/usr/lib/i386-linux-gnu/lib* /usr/lib32/
+/bin/ln -s /usr/lib32/libnss3.so.1d /usr/lib32/libnss3.so
+/bin/ln -s /usr/lib32/libssl3.so.1d /usr/lib32/libssl3.so
+/bin/ln -s /usr/lib32/libnspr4.so.0d /usr/lib32/libnspr4.so
 /usr/bin/apt-get -y install ia32-libs ia32-libs-gtk libgtk2.0-0
 /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
 /bin/ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
@@ -143,10 +143,10 @@ export GNOME_DESKTOP_SESSION_ID=default
 
 #echo GNOME_DESKTOP_SESSION_ID=default >> /etc/environment
 
-#/bin/rm -rf /tmp/libnss3
-#/bin/rm -rf /tmp/libnspr4
-#/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
-#/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
+/bin/rm -rf /tmp/libnss3
+/bin/rm -rf /tmp/libnspr4
+/bin/rm /root/libnss3-1d_3.14.5-1_deb7u3_i386.deb
+/bin/rm /root/libnspr4-0d_4.9.2-1_deb7u2_i386.deb
 /bin/rm /root/AdobeAIRInstaller.bin
 /bin/rm /root/Scratch-430.air
 
