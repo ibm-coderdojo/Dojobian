@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Update Dojobian
+Comment=Run IBM CoderDojo Dojobian system updates
+Exec=/root/DojobianSystemUpdate.sh
+Icon=update-manager
+Path=/root
+Terminal=true
+StartupNotify=false
+GenericName=
