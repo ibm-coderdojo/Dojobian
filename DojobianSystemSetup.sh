@@ -8,18 +8,18 @@ echo "
 #  Configure and update package repository
 #######################################################################
 "
-/usr/bin/wget --no-check-certificate -O /etc/apt/apt.conf.d/99defaultrelease https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/apt.conf.d/99defaultrelease
-/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/security.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/security.pref
-/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/stable.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/stable.pref
-/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/testing.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/testing.pref
-/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/unstable.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/unstable.pref
-/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/experimental.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/experimental.pref
-/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/security.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/security.list
-/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/stable.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/stable.list
-/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/testing.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/testing.list
-/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/unstable.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/unstable.list
-/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/experimental.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/experimental.list
-/usr/bin/dpkg --add-architecture i386
+#/usr/bin/wget --no-check-certificate -O /etc/apt/apt.conf.d/99defaultrelease https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/apt.conf.d/99defaultrelease
+#/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/security.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/security.pref
+#/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/stable.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/stable.pref
+#/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/testing.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/testing.pref
+#/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/unstable.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/unstable.pref
+#/usr/bin/wget --no-check-certificate -O /etc/apt/preferences.d/experimental.pref https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/preferences.d/experimental.pref
+#/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/security.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/security.list
+#/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/stable.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/stable.list
+#/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/testing.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/testing.list
+#/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/unstable.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/unstable.list
+#/usr/bin/wget --no-check-certificate -O /etc/apt/sources.list.d/experimental.list https://raw.githubusercontent.com/ibm-coderdojo/Dojobian/master/etc/apt/sources.list.d/experimental.list
+#/usr/bin/dpkg --add-architecture i386
 /usr/bin/apt-get update
 /usr/bin/apt-get -y upgrade
 
