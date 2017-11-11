@@ -25,6 +25,7 @@ add-apt-repository 'deb http://security.debian.org/debian-security stretch/updat
 add-apt-repository 'deb http://ftp.ie.debian.org/debian stretch main contrib non-free'
 apt-get update
 apt-get -y upgrade
+dpkg --add-architecture i386 && apt-get update && apt-get install wine32
 
 echo " 
 #######################################################################
