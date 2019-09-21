@@ -1,5 +1,8 @@
-# Dojobian
+# Dojobian 10 Full Install
 
+If you need just an upgrade from Debian 9 (stretch) to Debian 10 (buster) then follow the instructions in [UPGRADE-DEBIAN-9TO10.md](UPGRADE-DEBIAN-9TO10.md)
+
+## Instructions
 Put the usb stick with the debian image into the USB port and switch on the laptop.
 
 Press F12 to access the boot menu and select the USB drive to boot
