@@ -10,13 +10,15 @@ echo "
 "
 apt update
 apt -y upgrade
+apt -y autoremove
 
 echo " 
 #######################################################################
 #  Change APT repository from stretch (Debian 9) to buster (Debian 10)
 #######################################################################
 "
-sed -e "s/stretch/buster/" -i /etc/apt/sources.list
+sed -e "s/stretch/buster/g" -i /etc/apt/sources.list
+sed -e "s/stretch/buster/g" -i /etc/apt/sources.list.d/*
 
 echo " 
 #######################################################################
@@ -38,6 +40,7 @@ echo "
 #######################################################################
 "
 apt -y full-upgrade
+apt -y autoremove
 
 echo " 
 #######################################################################
